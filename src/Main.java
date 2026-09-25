@@ -2,22 +2,18 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void
+    public static Estoque estoque = new Estoque();
 
     public static void main(String[] args) {
-            return main;
-    }
-
-    {
         int opcao;
-        Estoque estoque = new Estoque();
+
         while (true) {
-            Scanner scanner = new Scanner(system.in);
-            opcao = scanner.nextInt();
+            Scanner scanner = new Scanner(System.in);
 
             mostraMenu();
+            opcao = scanner.nextInt();
 
-            witch (opcao) {
+            switch (opcao) {
                 case 1:
                     break;
                 case 2:
@@ -34,15 +30,38 @@ public class Main {
                     estoque.saida(idSaida, qtSaida);
                     break;
                 case 5:
-                    system.out.println("Informe")
+                    System.out.println("Informe o ID do produto");
+                    int idBusca = scanner.nextInt();
+                    estoque.buscaProduto(idBusca);
+                    break;
+                case 0:
+                    return;
+                default:
+                    System.out.println("Opção inválida");
+                    break;
             }
-
-
         }
-
     }
 
-    public static void setMain(void main) {
-        Main.main = main;
+    private static void mostraMenu() {
+        System.out.println("===================");
+        System.out.println("CONTROLE DE ESTOQUE");
+        System.out.println("===================");
+
+        System.out.println();
+
+        System.out.println("1 - Cadastrar produto");
+        System.out.println("2 - Listar produtos");
+        System.out.println("3 - Entrada de produtos");
+        System.out.println("4 - Saída de produtos");
+        System.out.println("5 - Buscar produto");
+        System.out.println("0 - Sair");
+    }
+
+    private static int getId(Scanner scanner) {
+        System.out.println("Informe o ID do produto");
+        int id = scanner.nextInt();
+        System.out.println("Informe a quantidade");
+        return id;
     }
 }
