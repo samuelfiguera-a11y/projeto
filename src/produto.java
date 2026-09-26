@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Produto {
     private int id;
     private String nome;
@@ -56,5 +58,14 @@ public class Produto {
     @Override
     public String toString(){
         return "ID: " + id + " | Nome: " + nome + " | Preço: R$" + preco + " | Quantidade em estoque: " + quantidadeEstoque;
+    }
+    public void cadatro() {
+        System.out.println("informe o id do produto");
+        Scanner scanner = new Scanner(System.in);
+        this.id = scanner.nextInt();
+        System.out.println("informe o id do nome");
+        Scanner scanner = new Scanner(System.in);
+
+
     }
 }

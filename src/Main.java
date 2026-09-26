@@ -62,6 +62,6 @@ public class Main {
         System.out.println("Informe o ID do produto");
         int id = scanner.nextInt();
         System.out.println("Informe a quantidade");
-        return id;
+        return  id;
     }
 }
